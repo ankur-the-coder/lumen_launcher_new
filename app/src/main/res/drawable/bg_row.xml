@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item><shape android:shape="rectangle"><solid android:color="#66101626" /><corners android:radius="16dp" /></shape></item>
+            <item><shape android:shape="rectangle"><gradient android:angle="315" android:startColor="#F2FFFFFF" android:centerColor="#26FFFFFF" android:endColor="#99FFFFFF" /><corners android:radius="16dp" /></shape></item>
+            <item android:top="2dp" android:left="2dp" android:right="2dp" android:bottom="2dp"><shape android:shape="rectangle"><gradient android:angle="270" android:startColor="#66FFFFFF" android:endColor="#2EFFFFFF" /><corners android:radius="0dp" /></shape></item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item><shape android:shape="rectangle"><solid android:color="#66101626" /><corners android:radius="16dp" /></shape></item>
+            <item><shape android:shape="rectangle"><gradient android:angle="315" android:startColor="#F2FFFFFF" android:centerColor="#26FFFFFF" android:endColor="#99FFFFFF" /><corners android:radius="16dp" /></shape></item>
+            <item android:top="2dp" android:left="2dp" android:right="2dp" android:bottom="2dp"><shape android:shape="rectangle"><gradient android:angle="270" android:startColor="#66FFFFFF" android:endColor="#2EFFFFFF" /><corners android:radius="0dp" /></shape></item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item><shape android:shape="rectangle"><solid android:color="#4D0A0F1C" /><corners android:radius="16dp" /></shape></item>
+            <item><shape android:shape="rectangle"><gradient android:angle="315" android:startColor="#80FFFFFF" android:centerColor="#0DFFFFFF" android:endColor="#47FFFFFF" /><corners android:radius="16dp" /></shape></item>
+            <item android:top="1.5dp" android:left="1.5dp" android:right="1.5dp" android:bottom="1.5dp"><shape android:shape="rectangle"><gradient android:angle="270" android:startColor="#38FFFFFF" android:endColor="#12FFFFFF" /><corners android:radius="0dp" /></shape></item>
+        </layer-list>
+    </item>
+</selector>

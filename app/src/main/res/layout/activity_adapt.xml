@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.example.tvlauncher.AdaptView
+        android:id="@+id/adaptView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_top_fade" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="34dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#80000000"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="This picture is not 16:9"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/aSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:shadowColor="#80000000"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:textColor="#E3E9F4"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hintPill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="36dp"
+        android:alpha="0"
+        android:background="@drawable/bg_hint"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="24dp"
+        android:paddingTop="11dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="11dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_panel_glass"
+        android:orientation="vertical"
+        android:paddingLeft="28dp"
+        android:paddingTop="20dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/modeDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:minHeight="44dp"
+            android:textColor="#D8E0EE"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/mFill" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:text="Fill" />
+            <TextView android:id="@+id/mBlur" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Fit + blur" />
+            <TextView android:id="@+id/mColor" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Fit + colour" />
+            <TextView android:id="@+id/mStretch" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Stretch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/zoomBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/zoomOut" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:text="Zoom out" />
+                <TextView android:id="@+id/zoomIn" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Zoom in" />
+                <TextView android:id="@+id/zoomReset" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Centre" />
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+            <TextView android:id="@+id/btnCancel" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:text="Cancel" />
+            <TextView android:id="@+id/btnApply" style="@style/Chip" android:layout_width="wrap_content" android:layout_height="44dp" android:layout_marginLeft="8dp" android:text="Apply wallpaper" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/busy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_panel_glass"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@color/accent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Applying wallpaper..."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+</FrameLayout>
