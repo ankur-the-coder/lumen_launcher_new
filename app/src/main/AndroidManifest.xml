@@ -36,8 +36,6 @@
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize|uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,20 +43,6 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Disabled twin of the launcher: toggling it makes Android ask "Always / Just once" again -->
-        <activity-alias
-            android:name=".FakeHome"
-            android:enabled="false"
-            android:exported="true"
-            android:label="Lumen"
-            android:targetActivity=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity-alias>
 
         <activity android:name=".DrawerActivity" android:exported="false" android:screenOrientation="landscape" />
         <activity android:name=".EpisodesActivity" android:exported="false" android:screenOrientation="landscape" />
